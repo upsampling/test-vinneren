@@ -1,11 +1,8 @@
-import './App.css';
+import Main from "./pages/Main";
 
 function App () {
-  return (
-    <div className='App'>
-      hola munod jijij
-    </div>
-  );
+  
+  return <Main/> ;
 }
 
 export default App;

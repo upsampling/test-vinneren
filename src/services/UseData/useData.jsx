@@ -1,8 +1,7 @@
 import { useState, useMemo } from 'react';
 import axios from 'axios';
 
-
-const baseURL = "https://swapi.dev/api";
+const baseURL = process.env.REACT_APP_URL_BASE;
 
 export const useDataStarWars = () => {
   const arrayTypes = ['people', 'starships', 'planets'];

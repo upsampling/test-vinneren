@@ -19,7 +19,7 @@ const Main = () => {
     list ? setTittle(`LISTADO DE ${listTypes[list]}`) : '';
   }, [list]);
 
-const handleLogin = (e) => {
+const handleSearch = (e) => {
   e.preventDefault();
 };
 
@@ -28,7 +28,7 @@ const handleLogin = (e) => {
       <h1 className='text-center mt-5 mb-5'>{tittle}</h1>
       <div className='d-flex justify-content-end'>
 
-        <Form onSubmit={handleLogin} >
+        <Form onSubmit={handleSearch} >
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Control 
               type="text" 

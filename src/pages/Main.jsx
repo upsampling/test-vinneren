@@ -3,10 +3,11 @@ import Tables from '../components/table/Tables';
 import { useDataStarWars } from '../services/UseData/useData'
 
 function Main() {
-  const { data, isLoading, handleInfo, selectType } = useDataStarWars();
+  const { data, isLoading, error, selectType } = useDataStarWars();
 
-  const typeList = "planets";
-  
+  // const typeList = "planets";
+  const typeList = "starships";
+
   useMemo(() => 
     selectType(typeList)
   , []);

@@ -8,21 +8,63 @@
         {
           "name": "CLIMA",
           "selector": "climate",
-          "sortable": true
+          "sortable": false
         },
         {
           "name": "RESIDENTES",
           "selector": "residents",
-          "sortable": true
+          "sortable": false
         },
         {
           "name": "CREACIÓN",
           "selector": "created",
-          "sortable": true
+          "sortable": false
         }
     ],
 
     "people": [
+        {
+            "name": "NOMBRE",
+            "selector": "name",
+            "sortable": true
+        },
+        {
+            "name": "GENERO",
+            "selector": "gender",
+            "sortable": false
+        },
+        {
+            "name": "PESO",
+            "selector": "mass",
+            "sortable": false
+        },
+        {
+            "name": "ALTURA",
+            "selector": "height",
+            "sortable": false
+        }
+    ],
 
+    "starships": [
+        {
+            "name": "NOMBRE",
+            "selector": "name",
+            "sortable": true
+        },
+        {
+            "name": "MODELO",
+            "selector": "model",
+            "sortable": false
+        },
+        {
+            "name": "NO. PASAJEROS",
+            "selector": "passengers",
+            "sortable": false
+        },
+        {
+            "name": "CLASE",
+            "selector": "starship_class",
+            "sortable": false
+        }
     ]
 }

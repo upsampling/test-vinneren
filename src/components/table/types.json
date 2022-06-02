@@ -1,0 +1,28 @@
+{
+    "planets": [
+        {
+          "name": "NOMBRE",
+          "selector": "name",
+          "sortable": true
+        },
+        {
+          "name": "CLIMA",
+          "selector": "climate",
+          "sortable": true
+        },
+        {
+          "name": "RESIDENTES",
+          "selector": "residents",
+          "sortable": true
+        },
+        {
+          "name": "CREACIÓN",
+          "selector": "created",
+          "sortable": true
+        }
+    ],
+
+    "people": [
+
+    ]
+}

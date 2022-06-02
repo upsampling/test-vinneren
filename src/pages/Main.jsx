@@ -1,13 +1,25 @@
-import React from 'react'
+import React, { useMemo } from 'react'
+import Tables from '../components/table/Tables';
 import { useDataStarWars } from '../services/UseData/useData'
 
 function Main() {
-  const { data, isLoading, handleInfo } = useDataStarWars();
+  const { data, isLoading, handleInfo, selectType } = useDataStarWars();
 
-  console.log('Soy la dataaaa: ', data);
+  const typeList = "planets";
+  
+  useMemo(() => 
+    selectType(typeList)
+  , []);
+
+
 
   return (
-    <div>hola jijiji</div>
+    <div>
+      <Tables 
+        data = { data }
+        type = {typeList}
+      />
+    </div>
   )
 }
 export default Main;

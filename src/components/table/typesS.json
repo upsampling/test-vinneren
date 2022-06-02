@@ -1,0 +1,23 @@
+{
+    "planets": {        
+        "name": "NOMBRE",
+        "climate": "CLIMA",
+        "population": "POBLACION",
+        "created": "CREACIÓN"
+
+    },
+    "people": {        
+        "name": "NOMBRE",
+        "gender": "GENERO",
+        "mass": "PESO",
+        "height": "ALTURA"
+
+    },
+    "starships": {        
+        "name": "NOMBRE",
+        "model": "MODELO",
+        "passengers": "NO. PASAJEROS",
+        "starship_class": "CLASE"
+
+    }
+}

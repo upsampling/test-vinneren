@@ -11,8 +11,8 @@
           "sortable": false
         },
         {
-          "name": "RESIDENTES",
-          "selector": "residents",
+          "name": "POBLACION",
+          "selector": "population",
           "sortable": false
         },
         {

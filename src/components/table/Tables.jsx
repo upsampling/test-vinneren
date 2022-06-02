@@ -15,19 +15,11 @@ const Tables = ({ data, type }) => {
   
   let tittle;
   
-  if( type === "people"){
-    tittle = "LISTADO DE PERSONAS"
-  }else if(type === "planets"){
-    tittle = "LISTADO DE PLANETAS"
-  }else if(type === "starships"){
-    tittle = "LISTADO DE NAVES"
-  }
   return (
       <div className='table-responsive'>
         <DataTable
           columns={column}
           data={data}
-          title={tittle}
           pagination
           paginationComponentOptions={paginationOption}
         />

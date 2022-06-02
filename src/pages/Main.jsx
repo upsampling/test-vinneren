@@ -17,26 +17,15 @@ const Main = () => {
 
   useMemo(() => {
     list ? setTittle(`LISTADO DE ${listTypes[list]}`) : '';
-  
-    // const retrievedObject = localStorage.getItem(list);
-    // setData(JSON.parse(retrievedObject))
-    // selectType(list)
   }, [list]);
 
 const handleLogin = (e) => {
   e.preventDefault();
 };
-const resetAll = ()=>{
-  localStorage.clear();
-  useDataStarWars();
-}
+
   return (
     <div className='container'>
       <h1 className='text-center mt-5 mb-5'>{tittle}</h1>
-
-      <button
-        onClick={resetAll}
-      >RESET</button>
       <div className='d-flex justify-content-end'>
 
         <Form onSubmit={handleLogin} >
@@ -66,7 +55,6 @@ const resetAll = ()=>{
       </div>
 
         <Tables 
-          // data = { data }
           type = {list}
         />
     </div>

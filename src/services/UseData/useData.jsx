@@ -4,7 +4,7 @@ import axios from 'axios';
 
 const baseURL = "https://swapi.dev/api";
 
-export const useDataStarWars = async() => {
+export const useDataStarWars = () => {
   const arrayTypes = ['people', 'starships', 'planets'];
 
 
@@ -18,7 +18,7 @@ export const useDataStarWars = async() => {
         localStorage.setItem(endpoint, JSON.stringify(res.data.results));
       }
     }
-  }, [getItem])
+  }, [])
 
 
   // const [data, setData] = useState();

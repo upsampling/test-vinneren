@@ -40,7 +40,7 @@ export default function FormAddData({types, passSaveData, stateChange}) {
             className="d-flex align-items-end flex-column"
             >
             <div className=''>
-                <div className="mb-1 mt-1 row">
+                <div className="mb-1 mt-3 row">
                     <label className="col-sm-5 col-form-label">{arrayItem[values[0]]}</label>
                     <div className="col-sm-3">
                         <input

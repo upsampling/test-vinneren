@@ -3,13 +3,13 @@ import axios from 'axios';
 
 const baseURL = process.env.REACT_APP_URL_BASE;
 
-export const useDataStarWars = () => {
+export const useDataStarWars = async() => {
   const arrayTypes = ['people', 'starships', 'planets'];
 
 
   const getItem = localStorage.getItem('people');
   
-  useMemo(async()=>{
+  // useMemo(async()=>{
     if(!getItem){
       for(const endpoint of arrayTypes){
         const url = `${baseURL}/${endpoint}`;
@@ -17,7 +17,7 @@ export const useDataStarWars = () => {
         localStorage.setItem(endpoint, JSON.stringify(res.data.results));
       }
     }
-  }, [])
+  // }, [])
 
 
   // const [data, setData] = useState();

@@ -5,6 +5,7 @@ import { GrClose } from 'react-icons/gr';
 import { BiAddToQueue } from 'react-icons/bi';
 import FormAddData from '../form/Form';
 import types from './typesS.json';
+import { useDataStarWars } from '../../services/UseData/useData';
 
 let filterData;
 
@@ -47,6 +48,11 @@ const handleDelete = ({item: {item1}})=>{
   setRemove(!remove);
 }
 
+const resetData = ()=>{
+  localStorage.clear();
+  useDataStarWars();
+  setRemove(!remove);
+}
   return (
     <>
     
@@ -92,23 +98,33 @@ const handleDelete = ({item: {item1}})=>{
 
         <div className='d-flex flex-column justify-content-end' >
           {
-            addValue ?
-              <GrClose
-              className='align-self-end'
-                size={30}
-                onClick={()=>setAddValue(false)}
-                />
-            : 
+            <div className='d-flex flex-row justify-content-end'>
+              <Button
+                className="me-5"
+                onClick={resetData}
+              >RESET</Button>
+              {
+                addValue ?
+                  <GrClose
+                  size={30}
+                  onClick={()=>setAddValue(false)}
+                  />
+                : 
+  
+                <BiAddToQueue
+                  size={35}
+                  onClick={()=>setAddValue(true)}
+                  />
 
-            <BiAddToQueue
-              size={35}
-              onClick={()=>setAddValue(true)}
-            />
+              }
+            
+            </div>
 
           }
             {
               addValue ? 
               <FormAddData
+              className="col-sm-5"
               types={[arrayTypes, type]} 
               passSaveData={setSaveData}
               stateChange={saveData}
